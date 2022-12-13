@@ -38,9 +38,9 @@ li a:hover:not(.active) {
 <body>
 
 <ul>
-  <li><a class="active" href="#PROFILE">PROFILE</a></li>
+  <li><a href="#PROFILE">PROFILE</a></li>
   <li><a href="#travel">TRAVEL</a></li>
-  <li><a href="#career">CAREER</a></li>
+  <li><a class="active" href="#career">CAREER</a></li>
 </ul>
 
 <style>
@@ -53,7 +53,7 @@ body {font-family: "Lato", sans-serif;}
   border: 1px solid #ccc;
   background-color: #f1f1f1;
   width: 30%;
-  height: 300px;
+  height: 500px;
 }
 
 /* Style the buttons inside the tab */
@@ -87,7 +87,7 @@ body {font-family: "Lato", sans-serif;}
   border: 1px solid #ccc;
   width: 70%;
   border-left: none;
-  height: 300px;
+  height: 500px;
   display: none;
 }
 
@@ -101,30 +101,27 @@ body {font-family: "Lato", sans-serif;}
 </head>
 <body>
 <div class="tab">
-  <button class="tablinks" onmouseover="openCity(event, 'PD')">Personal Data</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Paris')">Educational Background</button>
-  <button class="tablinks" onmouseover="openCity(event, 'Tokyo')">Family Background</button>
+  <button class="tablinks" onmouseover="openCareer(event, 'AN')">ANIMATOR</button>
+  <button class="tablinks" onmouseover="openCareer(event, 'VA')">VOICE ACTRESS</button>
+  <button class="tablinks" onmouseover="openCareer(event, 'IL')">IDOL</button>
 </div>
 
-<div id="PD" class="tabcontent">
-  <h3>London</h3>
-  <p>London is the capital city of England.</p>
+<div id="AN" class="tabcontent">
+  <p>I want to enhance more of my skills in animation and become an animator someday.</p>
 </div>
 
-<div id="Paris" class="tabcontent">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+<div id="VA" class="tabcontent">
+  <p> I really enjoyed dubbing specialy in anime where I use to dub it in Japanese.</p>
 </div>
 
-<div id="Tokyo" class="tabcontent">
-  <h3>Tokyo</h3>
-  <p>Tokyo is the capital of Japan.</p>
+<div id="IL" class="tabcontent">
+  <p>I am not that good but I really dreamed to be one of it.</p>
 </div>
 
 <div class="clearfix"></div>
 
 <script>
-function openCity(evt, cityName) {
+function openCareer(evt, carName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
@@ -134,7 +131,7 @@ function openCity(evt, cityName) {
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
-  document.getElementById(cityName).style.display = "block";
+  document.getElementById(carName).style.display = "block";
   evt.currentTarget.className += " active";
 }
 </script>
